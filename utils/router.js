@@ -9,7 +9,7 @@ const routes = [
   { path: "/", page: Home },
   { path: "/products", page: Products },
   { path: "/contact", page: Contact },
-  { path: "/card-products", page: CardProducts },
+
 ];
 
 // Función principal del router
