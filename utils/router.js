@@ -19,7 +19,7 @@ export const router = () => {
 
   // Buscamos la ruta en el array de rutas
   const route = routes.find((route) => route.path === path) || {
-    page: NotFound,
+    page: CardProducts,
   };
 
   // Renderizamos la página correspondiente
