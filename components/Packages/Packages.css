@@ -1,0 +1,62 @@
+#carrousel {
+  position: relative;
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  padding: 40px 0 60px 0;
+}
+
+#carrousel > .carrousel-container {
+  display: flex;
+  height: 70%;
+  gap: 20px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.carrousel-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carrousel-item > img {
+  width: 300px;
+  height: 400px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carrousel-item:hover img {
+  transform: scale(1.1);
+}
+
+.carrousel-item .buy-option {
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--secondary-text);
+  padding: 10px 20px;
+  font-size: 18px;
+  text-align: center;
+  display: none;
+  border-radius: 5px;
+}
+
+.carrousel-item:hover .buy-option {
+  display: block;
+}
+
+.carrousel-item > p {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.buy-option:hover {
+  background-color: var(--primary-text);
+  cursor: pointer;
+}

@@ -1,0 +1,304 @@
+#gallery {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.gallery-container {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.gallery-item {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gallery-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  padding: 14rem;
+  gap: 30px;
+}
+
+.gallery-navigation {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+button {
+  background: var(--accent);
+  color: var(--primary-text);
+  font-weight: 600;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 0.7rem;
+}
+
+button:hover {
+  background: var(--primary-text);
+  color: var(--secondary-text);
+}
+
+button > a {
+  color: var(--primary-text);
+}
+button > a:hover {
+  color: var(--secondary-text);
+}
+.prev-button,
+.next-button {
+  background: var(--secondary-text);
+  color: var(--primary-text);
+  font-weight: 400;
+}
+
+.prev-button:hover,
+.next-button:hover {
+  background: var(--accent);
+  color: var(--secondary-text);
+}
+h1 {
+  font-size: 3rem;
+}
+
+/*Hero Image Section*/
+
+.hero-image {
+  position: relative;
+  background-image: url("https://images.pexels.com/photos/2706653/pexels-photo-2706653.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  color: var(--secondary-text);
+  text-align: center;
+}
+
+.hero-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-image > * {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-image > .container {
+  width: 50%;
+}
+
+/*Offers Section*/
+
+.offers {
+  width: 100%;
+}
+.offers > .grid-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33.3%;
+  height: 40vh;
+}
+.grid-item:nth-child(2) {
+  background-image: url("https://theme793-travel-agency.myshopify.com/cdn/shop/files/img_14_300bd84d-2fce-47f2-902e-7ae37378bf36_540x.png?v=1659439237");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.grid-item:nth-child(3) {
+  background-image: url("https://theme793-travel-agency.myshopify.com/cdn/shop/files/img_15_23de8804-e614-40a8-8f22-66f2548fd24a_540x.png?v=1659441263");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.grid-item:last-child {
+  background-image: url("https://theme793-travel-agency.myshopify.com/cdn/shop/files/img_16_540x.png?v=1659441460");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.grid-item:nth-child(2) > a > p,
+.grid-item > p {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--secondary-text);
+  text-align: center;
+}
+
+.grid-item:nth-child(2) > a > span,
+.grid-item > span {
+  font-size: 2.7rem;
+  font-weight: 900;
+  color: var(--accent);
+  text-align: center;
+}
+.grid-item button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.grid-item button a {
+  text-decoration: none;
+  color: white;
+}
+
+.grid-item button:hover {
+  background: var(--primary-text);
+  color: var(--secondary-text);
+}
+.grid-item.large {
+  background-image: url("https://images.pexels.com/photos/1062021/pexels-photo-1062021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70vh;
+  width: 100%;
+}
+
+/*Banner Section*/
+
+.banner {
+  position: relative;
+  height: 65vh;
+  background-image: url("https://images.pexels.com/photos/2542332/pexels-photo-2542332.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  gap: 50px;
+  color: var(--secondary-text);
+  flex-wrap: wrap;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.banner > * {
+  position: relative;
+  z-index: 2;
+}
+.banner > article:first-child {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.banner > article:nth-child(2) {
+  width: 50%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) and (min-width: 600px) {
+  .gallery-item .overlay {
+    padding: 3rem;
+  }
+
+  #carrousel {
+    height: auto;
+    padding: 20px;
+    margin: 0 auto;
+  }
+
+  .hero-image > .container {
+    width: 90%;
+  }
+
+  .banner {
+    height: auto;
+    gap: 40px;
+    padding: 3rem;
+  }
+}
+
+/* Móvil */
+@media (max-width: 599px) {
+  .gallery-item .overlay {
+    padding: 1rem;
+  }
+  .overlay > img {
+    width: 60%;
+  }
+  .hero-image > .container {
+    width: 90%;
+  }
+
+  .grid-item {
+    width: 100%;
+  }
+
+  .banner {
+    height: auto;
+    gap: 20px;
+  }
+
+  .banner > article:first-child,
+  .banner > article:nth-child(2) {
+    width: 95%;
+  }
+}

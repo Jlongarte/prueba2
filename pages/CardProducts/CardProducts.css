@@ -1,0 +1,55 @@
+.DestinationCard {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 50px;
+}
+
+.DestinationCard > article {
+  width: 40%;
+}
+
+.mainPhoto img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.otherPhotos {
+  display: flex;
+  flex-wrap: wrap;
+}
+.otherPhotos img {
+  width: 15%;
+  margin: 0.5rem;
+  border-radius: 4px;
+}
+.destination-info {
+  padding: 3rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.destination-info > span {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: var(--accent);
+}
+
+/* Móvil */
+@media (max-width: 599px) {
+  .DestinationCard {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 0;
+  }
+  .DestinationCard > article {
+    width: 90%;
+  }
+}
